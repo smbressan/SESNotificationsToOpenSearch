@@ -30,8 +30,10 @@ zip -r lambda-function.zip .
 * Create function
 * Upload the zip generated in 3
 * Configure the environment variables:
-* BASE_URL: Your OpenSearch domain URL (without https://).
-* PREFIX: The index prefix for storing the data in OpenSearch.
+```
+BASE_URL: Your OpenSearch domain URL (without https://).
+PREFIX: The index prefix for storing the data in OpenSearch.
+```
 * Set Permissions for Lambda
 ### 5. Create an SNS Topic and Subscribe Lambda
 ### 6. Configure SES to Notify via SNS
