@@ -8,6 +8,10 @@ This Lambda function is designed to receive email notifications from Amazon SES 
 1. AWS account with access to Lambda, SNS, SES, and OpenSearch.
 2. Node.js 20.x installed on your local machine.
 
+## Authentication
+
+This Lambda function uses AWS IAM roles for authentication to OpenSearch, SNS, and other AWS services. We do **not** use hardcoded usernames or passwords. The AWS Lambda execution role must have the necessary permissions (e.g., `es:ESHttpPut`, `sns:Publish`) to interact with OpenSearch and SNS. The request signing is handled automatically using the `aws4` library to securely sign requests with AWS credentials.
+
 ## Setup and Installation
 
 ### 1. Clone the Repository
